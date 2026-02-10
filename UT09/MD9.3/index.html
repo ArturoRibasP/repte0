@@ -1,0 +1,30 @@
+index.html
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Prova Chart.js</title>
+    <!-- Importar Chart.js des de CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div style="width: 600px; height: 400px;">
+        <canvas id="meuGrafic"></canvas>
+    </div>
+    <script>
+        // Codi per crear el gràfic
+        const ctx = document.getElementById('meuGrafic').getContext('2d');
+        const meuGrafic = new Chart(ctx, {
+            type: 'bar', // Tipus de gràfic: bar, line, pie, etc.
+            data: {
+                labels: ['Gener', 'Febrer', 'Març','Abril'],
+                datasets: [{
+                    label: 'Vendes',
+                    data: [10, 20, 15, 200],
+                    backgroundColor: ['red', 'blue', 'green', 'purple']
+                }]
+            }
+        });
+    </script>
+</body>
+</html>
